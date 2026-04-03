@@ -1,19 +1,17 @@
 global:
-  domain: ALICE_TIMESERIES.alice-platform.com
+  domain: alice-timeseries.alice-platform.com
 frontend:
   replicas: 2
-  image: ALICE_TIMESERIES/frontend:latest
+  image: alice-timeseries/frontend:latest
   resources: { requests: { cpu: 100m, memory: 128Mi }, limits: { cpu: 500m, memory: 512Mi } }
 apiGateway:
   replicas: 2
-  image: ALICE_TIMESERIES/api-gateway:latest
+  image: alice-timeseries/api-gateway:latest
   resources: { requests: { cpu: 200m, memory: 256Mi }, limits: { cpu: 1000m, memory: 1Gi } }
 coreEngine:
   replicas: 2
-  image: ALICE_TIMESERIES/core-engine:latest
+  image: alice-timeseries/core-engine:latest
   resources: { requests: { cpu: 500m, memory: 512Mi }, limits: { cpu: 2000m, memory: 2Gi } }
-redis:
-  image: redis:7-alpine
 autoscaling:
   enabled: true
   minReplicas: 2

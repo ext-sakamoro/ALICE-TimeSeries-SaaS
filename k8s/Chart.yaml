@@ -1,5 +1,5 @@
 apiVersion: v2
-name: ALICE_TIMESERIES
+name: alice-timeseries
 description: ALICE TimeSeries
 type: application
 version: 0.1.0
